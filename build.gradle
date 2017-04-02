@@ -26,3 +26,7 @@ dependencies {
     testCompile 'org.junit.jupiter:junit-jupiter-api:+',
             'org.hamcrest:java-hamcrest:+'
 }
+
+task wrapper (type: Wrapper) {
+    gradleVersion = '3.4'
+}
