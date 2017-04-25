@@ -1,31 +1,49 @@
 package model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.Value;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-@Value
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
-    private int id;
+
+    public static String FIRST_NAME_KEY = "firstName";
+
     //    id            INT AUTO_INCREMENT PRIMARY KEY,
-    private String first_name;
+    private int id;
+
     //    first_name    VARCHAR(64)  NOT NULL,
-    private String last_name;
+    private String first_name;
+
     //    last_name     VARCHAR(64)  NOT NULL,
-    private String pathronimic;
+    private String last_name;
+
     //    pathronimic   VARCHAR(255),
-    private String nickname;
+    private String pathronimic;
+
     //    nickname      VARCHAR(64)  NOT NULL,
-    private Date dob;
-    //    dob           DATE,
-    private int addressId;
+    private String nickname;
+
+    //    dob DATE,
+    private LocalDate dob;
+
     //    address_id    INT,
-    private int licenseLevel;
+    private Address address;
+
     //    license_level INT,
-    private String telephone;
+    private License license;
+
     //    telephone     VARCHAR(64)  NOT NULL,
-    private String email;
+    private String telephone;
+
     //    email         VARCHAR(128) NOT NULL,
-    private String password;
+    private String email;
+
     //    password      VARCHAR(256) NOT NULL,
+    private String passwordHash;
 }

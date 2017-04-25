@@ -11,7 +11,7 @@ repositories {
     mavenCentral()
     jcenter()
     mavenLocal()
-    maven{ url 'https://jitpack.io' }
+    maven { url 'https://jitpack.io' }
 }
 
 configurations {
@@ -22,11 +22,16 @@ dependencies {
     compile 'com.github.Vyacheslav-Lapin:Hegel:master-SNAPSHOT',
             'ch.qos.logback:logback-classic:+',
             'io.javaslang:javaslang:+'
+
+    //  Tomcat internal libraries
+    providedCompile 'org.apache.tomcat:tomcat-api:+',
+                    'org.apache.tomcat:tomcat-jsp-api:+'
+
     compileOnly 'org.projectlombok:lombok:+'
     testCompile 'org.junit.jupiter:junit-jupiter-api:+',
             'org.hamcrest:java-hamcrest:+'
 }
 
-task wrapper (type: Wrapper) {
+task wrapper(type: Wrapper) {
     gradleVersion = '3.4'
 }
