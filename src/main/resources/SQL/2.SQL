@@ -38,7 +38,6 @@ VALUES ('123898009809',
         1,
         1989-03-04,
         2017-03-04,
-
 );
 
 INSERT INTO Gun (id, model_id, dob, delivery_date, buyer_id)
@@ -46,5 +45,4 @@ VALUES ('989898009345',
         1,
         1989-03-04,
         2017-03-04,
-
 );

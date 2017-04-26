@@ -7,10 +7,10 @@ import java.util.Optional;
 
 public interface UserDao {
 
-
     int create(User user);
 
-    default Optional<User> get(int id){
+    default Optional<User> get(int id) {
+
         return getAll().stream().filter(user -> user.getId() == id).findAny();
     }
 
